@@ -2,7 +2,15 @@
 
 This is a simple password generator written in react.
 
-## Start App
+# Start App
+
+First you need to initialize all npm packages.
+
+To do this type
+
+`yarn`
+or
+`npm i`
 
 To start the react app just type
 
