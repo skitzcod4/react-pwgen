@@ -20,6 +20,12 @@ or
 
 into your terminal.
 
+# Responsive Design
+
+This app is not responsive.
+
+I will make this any time soon.
+
 # Licence
 
 This projekt runs under the MIT-Licence
