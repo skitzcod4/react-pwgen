@@ -49,12 +49,14 @@ body {
     .app-title {
       font-size: 48px;
       max-width: $box-width;
+      text-align: center;
     }
 
     .app-description {
       font-size: 18px;
       margin-bottom: 24px;
       max-width: $box-width;
+      text-align: center;
     }
   }
 }
