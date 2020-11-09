@@ -73,44 +73,50 @@ class App extends Component {
 
   render() {
     return (
-      <div className="index">
-        <h1 className="app-title">Password Generator</h1>
-        <p className="app-description">This password generator was written in react. Have fun using it!</p>
-        <div className="box">
-          <div className="box-header">
-            <h2 className="password">{this.state.password}</h2>
-            <button className="btn" onClick={this.generatePassword}>Generate!</button>
-          </div>
-          <div className="box-body">
-            <div className="strength">
-              <p className={this.state.strong === true ? 'strong' : 'weak'}>
-                <i className="fas fa-shield-alt"></i>
-                <span>{this.state.strong === true ? 'Strong' : 'Weak'}</span>
-              </p>
+      <div>
+        <a href="https://justinprassl.de/" className="website">
+          <i class="fas fa-arrow-left"></i>
+          <span>Justin Praßl</span>
+        </a>
+        <div className="index">
+          <h1 className="app-title">Password Generator</h1>
+          <p className="app-description">This password generator was written in react. Have fun using it!</p>
+          <div className="box">
+            <div className="box-header">
+              <h2 className="password">{this.state.password}</h2>
+              <button className="btn" onClick={this.generatePassword}>Generate!</button>
             </div>
-            <div className="box-sep"></div>
-            <div className="length">
-              <span className="length-text">Length:</span>
-              <input type="range" min="6" max="64" value={this.state.length} id="length-range" onChange={this.rangeChange} />
-              <span className="length-value">{this.state.length}</span>
-            </div>
-            <div className="box-sep"></div>
-            <div className="options">
-              <div className="option">
-                <input id="upper" type="checkbox" checked={this.state.uppercase} onChange={() => this.setState({ uppercase: !this.state.uppercase })} />
-                <label for="upper">Uppercase?</label>
+            <div className="box-body">
+              <div className="strength">
+                <p className={this.state.strong === true ? 'strong' : 'weak'}>
+                  <i className="fas fa-shield-alt"></i>
+                  <span>{this.state.strong === true ? 'Strong' : 'Weak'}</span>
+                </p>
               </div>
-              <div className="option">
-                <input id="lower" type="checkbox" checked={this.state.lowercase} onChange={() => this.setState({ lowercase: !this.state.lowercase })} />
-                <label for="lower">Lowercase?</label>
+              <div className="box-sep"></div>
+              <div className="length">
+                <span className="length-text">Length:</span>
+                <input type="range" min="6" max="64" value={this.state.length} id="length-range" onChange={this.rangeChange} />
+                <span className="length-value">{this.state.length}</span>
               </div>
-              <div className="option">
-                <input id="special" type="checkbox" checked={this.state.special} onChange={() => this.setState({ special: !this.state.special })} />
-                <label for="special">Special Chars?</label>
-              </div>
-              <div className="option">
-                <input id="digits" type="checkbox" checked={this.state.digits} onChange={() => this.setState({ digits: !this.state.digits })} />
-                <label for="digits">Digits?</label>
+              <div className="box-sep"></div>
+              <div className="options">
+                <div className="option">
+                  <input id="upper" type="checkbox" checked={this.state.uppercase} onChange={() => this.setState({ uppercase: !this.state.uppercase })} />
+                  <label for="upper">Uppercase?</label>
+                </div>
+                <div className="option">
+                  <input id="lower" type="checkbox" checked={this.state.lowercase} onChange={() => this.setState({ lowercase: !this.state.lowercase })} />
+                  <label for="lower">Lowercase?</label>
+                </div>
+                <div className="option">
+                  <input id="special" type="checkbox" checked={this.state.special} onChange={() => this.setState({ special: !this.state.special })} />
+                  <label for="special">Special Chars?</label>
+                </div>
+                <div className="option">
+                  <input id="digits" type="checkbox" checked={this.state.digits} onChange={() => this.setState({ digits: !this.state.digits })} />
+                  <label for="digits">Digits?</label>
+                </div>
               </div>
             </div>
           </div>

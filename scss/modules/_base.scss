@@ -8,6 +8,35 @@ body {
   margin: 0;
   background: $background;
 
+  .website {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    color: $text-body;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+
+    &:hover {
+      i, span {
+        color: $text-title;
+      }
+    }
+    
+    i, span {
+      transition: color .2s ease-out;
+    }
+
+    i {
+      margin-right: 8px;
+      font-size: 18px;
+    }
+
+    span {
+      font-weight: 700;
+    }
+  }
+
   .index {
     width: 100vw;
     height: 100vh;
@@ -43,4 +72,8 @@ h1, h2, h3, h4, h5, h6 {
 
 p, span, a, button {
   color: $text-body;
+}
+
+a {
+  text-decoration: none;
 }
