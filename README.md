@@ -2,13 +2,15 @@
 
 This is a simple password generator written in react.
 
-## Available Scripts
+## Start App
 
-To start the react script type in
+To start the react app just type
 
 `yarn start`
 or
 `npm start`
+
+into your terminal.
 
 # Licence
 
