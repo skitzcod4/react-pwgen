@@ -8,4 +8,27 @@
   font-weight: 600;
   border-radius: 4px;
   cursor: pointer;
+  transition: background .2s ease-out;
+  position: relative;
+
+  &:hover, &:active {
+    background: $primary-hover;
+  }
+
+  &.btn-square {
+    padding: 8px;
+    text-align: center;
+    background: $tertiary;
+    
+    &:hover, &:active {
+      background: $tertiary-hover;
+    }
+  
+    i {
+      width: 16px;
+      height: 16px;
+      font-size: 16px;
+      text-align: center;
+    }
+  }
 }

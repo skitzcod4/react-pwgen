@@ -104,6 +104,25 @@ input[type=range]::-moz-range-thumb {
   font-weight: 600;
   border-radius: 4px;
   cursor: pointer;
+  transition: background 0.2s ease-out;
+  position: relative;
+}
+.btn:hover, .btn:active {
+  background: #53c787;
+}
+.btn.btn-square {
+  padding: 8px;
+  text-align: center;
+  background: #5CC8DB;
+}
+.btn.btn-square:hover, .btn.btn-square:active {
+  background: #52b0c0;
+}
+.btn.btn-square i {
+  width: 16px;
+  height: 16px;
+  font-size: 16px;
+  text-align: center;
 }
 
 input[type=checkbox] {
@@ -151,6 +170,56 @@ input[type=checkbox]:checked + label:after {
   margin: 0 0 0 14px;
 }
 
+.copy-popover {
+  position: absolute;
+  background: #535F87;
+  padding: 8px;
+  border-radius: 4px;
+  width: 100px;
+  top: -64px;
+  left: -42px;
+  opacity: 0;
+}
+.copy-popover span {
+  color: #5CDB95;
+}
+.copy-popover:after {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 8px;
+  background: #535F87;
+  left: 0;
+  bottom: -6px;
+  right: 0;
+  margin: 0 auto;
+  clip-path: polygon(50% 100%, 0 0, 100% 0);
+}
+
+.popover-anim {
+  animation: pop 3s;
+}
+
+@keyframes pop {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  10% {
+    opacity: 1;
+    transform: scale(1.08);
+  }
+  15% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 .box {
   width: 600px;
   display: flex;
