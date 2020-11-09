@@ -1,0 +1,83 @@
+.box {
+  width: $box-width;
+  display: flex;
+  flex-direction: column;
+  background: $background-secondary;
+  border-radius: 8px;
+  overflow: hidden;
+
+  .box-header {
+    background: $background-tertiary;
+    text-align: center;
+    padding: 16px 16px 24px;
+    word-wrap: break-word;
+
+    .password {
+      margin-bottom: 16px;
+      font-size: 32px;
+    }
+  }
+
+  .box-body {
+    padding: 0 16px;
+
+    .box-sep {
+      width: 100%;
+      height: 1px;
+      background: $background-tertiary;
+    }
+
+    .strength, .length, .options {
+      padding: 24px 8px;
+      font-size: 18px;
+    }
+
+    .strength {
+      i {
+        margin-right: 8px;
+        font-size: 24px;
+      }
+
+      .strong, .weak {
+        display: flex;
+        align-items: center;
+      }
+
+      .strong {
+        i {
+          color: $primary;
+        }
+      }
+
+      .weak {
+        i {
+          color: $secondary;
+        }
+      }
+    }
+
+    .length {
+      display: flex;
+      align-items: center;
+
+      .length-text {
+        margin-right: 16px;
+      }
+
+      .length-value {
+        margin-left: 16px;
+      }
+    }
+
+    .options {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .option {
+        margin: 0 4px;
+        width: calc($box-width / 4);
+      }
+    }
+  }
+}

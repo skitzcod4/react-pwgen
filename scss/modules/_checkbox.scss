@@ -1,0 +1,44 @@
+input[type="checkbox"] {
+  display: none;
+}
+
+input[type="checkbox"] + label {
+  position: relative;
+  display: inline-flex;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 1.3;
+  color: $text-body;
+  font-weight: 600;
+}
+
+input[type="checkbox"] + label:before {
+  width: 30px;
+  height: 16px;
+  border-radius: 32px;
+  border: 2px solid $text-body;
+  background-color: $secondary;
+  content: "";
+  margin-right: 8px;
+  transition: background-color .2s ease-out;
+}
+
+input[type="checkbox"] + label:after {
+  width: 14px;
+  height: 14px;
+  border-radius: 30px;
+  background-color: $background-tertiary;
+  content: "";
+  transition: margin 0.1s linear;
+  position: absolute;
+  left: 3px;
+  top: 3px;
+}
+
+input[type="checkbox"]:checked + label:before {
+  background-color: $primary;
+}
+
+input[type="checkbox"]:checked + label:after {
+  margin: 0 0 0 14px;
+}
