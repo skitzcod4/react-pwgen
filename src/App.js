@@ -28,29 +28,17 @@ const App = () => {
     let pattern = []
     let password = []
 
-    if (lowercase) {
-      lowerChars.forEach(char => {
-        pattern.push(char)
-      })
-    }
+    if (lowercase)
+      lowerChars.forEach(char => { pattern.push(char) })
 
-    if (uppercase) {
-      upperChars.forEach(char => {
-        pattern.push(char)
-      })
-    }
+    if (uppercase)
+      upperChars.forEach(char => { pattern.push(char) })
 
-    if (special) {
-      specialChars.forEach(char => {
-        pattern.push(char)
-      })
-    }
+    if (special)
+      specialChars.forEach(char => { pattern.push(char) })
 
-    if (digits) {
-      digitChars.forEach(char => {
-        pattern.push(char)
-      })
-    }
+    if (digits)
+      digitChars.forEach(char => { pattern.push(char) })
 
     for (let i = 0; i < length; i++) {
       let random = Math.floor(Math.random() * Math.floor(pattern.length))
@@ -71,6 +59,7 @@ const App = () => {
     let popover = document.getElementById('copy-popover')
     cb.write(password)
     popover.classList.add('popover-anim')
+    
     setTimeout(() => {
       popover.classList.remove('popover-anim')
     }, 3000)
