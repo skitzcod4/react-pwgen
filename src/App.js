@@ -15,9 +15,8 @@ const App = () => {
   const checkPassword = (val) => {
     let regEx = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\\$%\\^&\\*])(?=.{8,})/
 
-    if (regEx.test(val))
-      setStrong(true)
-    else
+    regEx.test(val) ?
+      setStrong(true) :
       setStrong(false)
   }
 
